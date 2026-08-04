@@ -11,38 +11,27 @@ body {
 }
 
 
-/*
-    DAKboard canvas
-    16:9 aspect ratio
-*/
 #countdown-container {
-
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 3.5vw;
-
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 
 .countdown-slot {
-
-    width: 7vw;
-
+    width: 19%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 
 .countdown-image {
-    width: 7vw;
-    height: 8vh;
+    width: 100%;
+    height: 45%;
 
     object-fit: contain;
     
