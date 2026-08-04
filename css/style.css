@@ -1,0 +1,114 @@
+body {
+
+    margin: 0;
+    background: black;
+    color: white;
+
+    font-family: Roboto, Arial, sans-serif;
+
+    overflow: hidden;
+
+}
+
+
+/*
+    DAKboard canvas
+    16:9 aspect ratio
+*/
+#countdown-container {
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3.5vw;
+
+}
+
+
+.countdown-slot {
+
+    width: 7vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.countdown-image {
+
+    width: 7vw;
+    height: 8vh;
+
+    object-fit: cover;
+
+}
+
+
+.event-name {
+
+    margin-top: 1vh;
+
+    height: 2.5vw;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1vw;
+    font-weight: bold;
+
+    text-align: center;
+
+}
+
+
+.countdown-text {
+
+    height: 4vw;
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+
+.countdown-number {
+
+    font-size: 3vw;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+}
+
+
+.countdown-label {
+
+    font-size: 1vw;
+
+    font-weight: bold;
+
+    letter-spacing: .15em;
+
+}
+
+
+.special-countdown {
+
+    font-size: 1.2vw;
+
+    font-weight: bold;
+
+    line-height: 4vw;
+
+}
