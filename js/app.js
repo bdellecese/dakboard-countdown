@@ -30,10 +30,12 @@ async function renderCountdown() {
         if(event) {
 
             slot.innerHTML = `
-                <img 
-                    class="countdown-image"
-                    src="${event.image}"
-                >
+                <div class="countdown-image-frame">
+                    <img
+                        class="countdown-image"
+                        src="${event.image}"
+                    >
+                </div>
                 
                 <div class="event-name">
                     ${event.event}
