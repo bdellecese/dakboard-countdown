@@ -69,11 +69,11 @@ async function getCountdownEvents() {
 
                 date: parseGoogleDate(cells[1]?.v),
 
-                image: cells[2]?.v || "",
+                enabled: cells[2]?.v === true,
 
-                enabled: cells[3]?.v === true,
+                type: cells[3]?.v || "event",
 
-                type: cells[4]?.v || "event"
+                image: cells[4]?.v || ""
 
             };
 

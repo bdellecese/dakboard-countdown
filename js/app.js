@@ -1,3 +1,41 @@
+function getSpecialCountdown(event) {
+
+    let prefix = "";
+
+    switch(event.type) {
+
+        case "birthday":
+            prefix = "🎂 ";
+            break;
+
+        case "trip":
+            prefix = "✈️ ";
+            break;
+
+        case "sports":
+            prefix = "🏆 ";
+            break;
+
+        case "holiday":
+            prefix = "🎉 ";
+            break;
+
+        default:
+            prefix = "";
+    }
+
+
+    if (event.days === 0) {
+        return `${prefix}TODAY!`;
+    }
+
+
+    if (event.days === 1) {
+        return `${prefix}TOMORROW!`;
+    }
+
+}
+
 async function renderCountdown() {
 
     const container = document.getElementById(
@@ -45,10 +83,14 @@ async function renderCountdown() {
                 
                 ${
                     event.days === 0   
-                    ? `<div class="special-countdown">TODAY!</div>`
+                     ? `<div class="special-countdown">
+                        ${getSpecialCountdown(event)}
+                     </div>`
    
                     : event.days === 1
-                    ? `<div class="special-countdown">TOMORROW</div>`
+                    ? `<div class="special-countdown">
+                        ${getSpecialCountdown(event)}
+                    </div>`
    
                     : `
    
@@ -65,7 +107,8 @@ async function renderCountdown() {
    
                 }
 
-</div>
+
+                </div>
             `;  
         }
 
