@@ -61,20 +61,25 @@ async function getCountdownEvents() {
            return rows.map(row => {
     
             const cells = row.c;
-            
-        
+
+
+            if (cells[0]?.v === "Memorial Day") {
+                console.log("Memorial Day raw cells:", cells);
+            }
+
             return {
-                
                 event: cells[0]?.v || "",
-
                 date: parseGoogleDate(cells[1]?.v),
-
                 enabled: cells[2]?.v === true,
-
                 type: cells[3]?.v || "event",
-
-                image: cells[4]?.v || ""
-
+                image: cells[4]?.v || "",
+                recurring: cells[5]?.v === true,
+                recurringRule: cells[6]?.v || "",
+                recurringMonth: String(cells[7]?.v || "").trim(),
+                recurringWeek: String(cells[8]?.v || "").trim(),
+                recurringWeekday: String(cells[9]?.v || "").trim(),
+                recurringOffsetDays: String(cells[10]?.v || "").trim(),
+                recurringReference: String(cells[11]?.v || "").trim()
             };
 
         });
